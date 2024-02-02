@@ -1,0 +1,88 @@
+alwaysRunPostSteps: false
+appium: false
+autosplit: true
+betaFeature:
+    setPartiallyCompletedAsCompleted: false
+captureScreenRecordingForScenarios: false
+codeDirectory: java-testng-selenium
+collectLocalGitData: true
+combineTasksInMatrixMode: false
+concurrency: 1
+cypress: false
+differentialUpload:
+    enabled: false
+    forcedDisabled: false
+    ttlHours: null
+dynamicAllocation: false
+errorCategorizedOnFailureOnly: false
+framework:
+    additional_args: null
+    baseCommand: ""
+    defaultReports: false
+    discoveryFlags: []
+    discoveryType: method
+    downloadURL: ""
+    flags:
+        - -Dtestngxml=single
+    isTestNGXMLSuite: true
+    licenseKey: ""
+    name: maven/testng
+    runnerFlags: []
+    toscaArgs: null
+    userdefinediscovery: false
+    version: ""
+    workingDirectory: ""
+globalTimeout: 150
+jobID: c9262c8b-1a9b-4e8c-bb00-77cbd1e07db1
+key: zhwVrW3mU0VMX8cdhE8N2SjBdksvkZxIveF49eqKDOEGPn6amD
+maxRetries: 3
+maxRetriesPreSteps: 0
+mergeArtifacts: true
+meta: {}
+platformConfig: null
+post:
+    - rm -v demo.txt
+postDirectives:
+    commands:
+        - rm -v demo.txt
+    shell: ""
+    workingDirectory: ""
+pre:
+    - mvn dependency:resolve
+preDirectives:
+    commands:
+        - mvn dependency:resolve
+    maxRetries: 0
+    shell: ""
+    workingDirectory: ""
+project:
+    id: ""
+    name: ""
+    type: default
+retryOnFailure: true
+runson: linux
+runtime:
+    language: java
+    version: "11"
+    addons: []
+    opts: {}
+sourcePayload:
+    verifySSL: true
+testDiscoveryResult:
+    - com.lambdatest.TestNGTodo2#basicTest
+testSuiteStep: 150
+testSuiteTimeout: 150
+testSuites: []
+triggerMode: false
+tunnelOpts:
+    testsPerTunnel: 10
+uploadArtefacts:
+    - email:
+        linkValidity: 0
+        metaInfo: []
+        to: []
+      name: ExecutionSnapshots
+      path:
+        - target/surefire-reports/
+user: Polamada.Jayasaivardhan
+version: "0.2"

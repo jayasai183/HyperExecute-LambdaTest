@@ -1,0 +1,37 @@
+version: 0.2
+globalTimeout: 150
+testSuiteTimeout: 150
+testSuiteStep: 150
+
+runson: linux
+
+autosplit: true
+retryOnFailure: true
+
+maxRetries: 3
+concurrency: 1
+
+pre:
+  # Skip execution of the tests in the pre step
+  - mvn dependency:resolve
+
+post:
+  - rm -v demo.txt
+
+mergeArtifacts: true
+
+
+uploadArtefacts:
+ - name: ExecutionSnapshots
+   path:
+    - target/surefire-reports/
+
+framework:  
+  name: maven/testng
+  defaultReports: false
+  discoveryType: method
+  flags: ["-Dtestngxml=single"]
+  
+runtime:
+  language: java
+  version: "11"
